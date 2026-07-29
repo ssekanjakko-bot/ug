@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html><head><title>Savings - Sanel SACCO</title>
+<link rel="stylesheet" href="style.css"></head><body>
+<!-- COPY HEADER + NAV FROM index.html and change active class -->
+
+<div class="container">
+<h2>Record Savings Deposit</h2>
+<form onsubmit="alert('Deposit of UGX '+document.getElementById('amt').value+' recorded for '+document.getElementById('name').value); return false;">
+  <label>Member Name</label><br>
+  <input id="name" type="text" placeholder="e.g. Peter Musoke" style="padding:10px;width:100%;margin:10px 0"><br>
+  <label>Amount UGX</label><br>
+  <input id="amt" type="number" placeholder="50000" style="padding:10px;width:100%;margin:10px 0"><br>
+  <button class="btn">Save Deposit</button>
+</form>
+
+<h2 style="margin-top:30px">Today's Deposits</h2>
+<table>
+<tr><th>Time</th><th>Member</th><th>Amount</th><th>Receipt</th></tr>
+<tr><td>09:32 AM</td><td>Margaret Kato</td><td>UGX 850,000</td><td><a href="#" onclick="alert('Printing receipt #00124')">Print</a></td></tr>
+</table>
+</div>
+</body></html>
