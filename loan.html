@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loans - Sanel SACCO</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div><h2>SANEL JINJA SACCO</h2><span>Source of the Nile</span></div>
+  <div>Admin User</div>
+</header>
+
+<nav>
+  <a href="index.html">Dashboard</a>
+  <a href="members.html">Members</a>
+  <a href="savings.html">Savings</a>
+  <a href="loans.html" class="active">Loans</a>
+  <a href="reports.html">Reports</a>
+</nav>
+
+<div class="container">
+  <h2>Loan Management</h2>
+  <a href="#" class="btn" onclick="alert('Loan Application Form Opens Here')">+ New Loan Application</a>
+
+  <h2 style="margin-top:30px">Active Loans</h2>
+  <table>
+    <tr><th>Loan ID</th><th>Member</th><th>Amount</th><th>Interest</th><th>Balance</th><th>Status</th><th>Action</th></tr>
+    <tr>
+      <td>LN001</td><td>James Okello</td><td>UGX 5,000,000</td><td>10%</td><td>UGX 3,200,000</td>
+      <td><span class="status completed">Active</span></td>
+      <td><a href="#" onclick="alert('Record Repayment: James Okello owes 3.2M')">Repay</a></td>
+    </tr>
+    <tr>
+      <td>LN002</td><td>Aisha Nakato</td><td>UGX 2,000,000</td><td>10%</td><td>UGX 800,000</td>
+      <td><span class="status completed">Active</span></td>
+      <td><a href="#" onclick="alert('Record Repayment: Aisha Nakato owes 800K')">Repay</a></td>
+    </tr>
+    <tr>
+      <td>LN003</td><td>Peter Musoke</td><td>UGX 1,500,000</td><td>10%</td><td>UGX 1,500,000</td>
+      <td><span class="status pending">Overdue</span></td>
+      <td><a href="#" onclick="alert('Send SMS Reminder to Peter Musoke')">Remind</a></td>
+    </tr>
+  </table>
+
+  <h2 style="margin-top:30px">Recent Loan Transactions</h2>
+  <table>
+    <tr><th>Date</th><th>Member</th><th>Type</th><th>Amount</th></tr>
+    <tr><td>28 Jul 2026</td><td>James Okello</td><td>Disbursement</td><td>UGX 5,000,000</td></tr>
+    <tr><td>27 Jul 2026</td><td>Aisha Nakato</td><td>Repayment</td><td>UGX 200,000</td></tr>
+  </table>
+</div>
+
+</body>
+</html>
