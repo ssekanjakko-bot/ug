@@ -1,121 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sanel Technologies Jinja SACCO</title>
-  <style>
-    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',Arial,sans-serif}
-    body{background:#f4f8fb;color:#333}
-    header{background:linear-gradient(90deg,#003366,#009933);color:white;padding:20px;display:flex;justify-content:space-between;align-items:center}
-    header h1{font-size:20px}
-    header span{font-size:12px;opacity:0.9}
-    .container{padding:20px;max-width:1200px;margin:auto}
-    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin-bottom:30px}
-    .card{background:white;padding:20px;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,0.08);border-left:5px solid #009933}
-    .card h3{color:#003366;font-size:14px;margin-bottom:8px}
-    .card h2{font-size:26px;color:#003366}
-    .card p{font-size:12px;color:green;margin-top:5px}
-    .section{background:white;padding:20px;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,0.08);margin-bottom:20px}
-    .section h2{color:#003366;margin-bottom:15px;font-size:18px}
-    table{width:100%;border-collapse:collapse}
-    th,td{padding:12px;text-align:left;border-bottom:1px solid #eee;font-size:14px}
-    th{background:#003366;color:white}
-    .btn{background:#D4AF37;color:#003366;padding:10px 20px;border:none;border-radius:8px;font-weight:bold;cursor:pointer}
-    .status{padding:5px 10px;border-radius:20px;font-size:12px}
-    .completed{background:#d4edda;color:#155724}
-    .pending{background:#fff3cd;color:#856404}
-    footer{text-align:center;padding:20px;font-size:12px;color:#666}
-    @media(max-width:768px){header h1{font-size:16px}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sanel Jinja SACCO</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',Arial}
+body{background:#f4f8fb}
+header{background:linear-gradient(90deg,#003366,#009933);color:white;padding:15px;display:flex;justify-content:space-between}
+nav{background:#002244;padding:10px;display:flex;gap:15px;overflow-x:auto}
+nav a{color:white;text-decoration:none;padding:8px 15px;border-radius:6px;white-space:nowrap}
+nav a.active, nav a:hover{background:#D4AF37;color:#003366;font-weight:bold}
+.container{padding:20px;max-width:1200px;margin:auto}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{background:white;padding:20px;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,0.08);border-left:5px solid #009933}
+.btn{background:#D4AF37;color:#003366;padding:10px 20px;border:none;border-radius:8px;font-weight:bold;cursor:pointer;text-decoration:none;display:inline-block}
+table{width:100%;background:white;border-radius:12px;overflow:hidden;margin-top:15px}
+th,td{padding:12px;text-align:left;border-bottom:1px solid #eee}
+th{background:#003366;color:white}
+</style>
 </head>
 <body>
 
 <header>
-  <div>
-    <h1>SANEL TECHNOLOGIES JINJA SACCO</h1>
-    <span>Source of the Nile • Jinja, Uganda</span>
-  </div>
-  <button class="btn">+ New Transaction</button>
+  <div><h2>SANEL JINJA SACCO</h2><span>Source of the Nile</span></div>
+  <div>Admin User</div>
 </header>
+
+<nav>
+  <a href="index.html" class="active">Dashboard</a>
+  <a href="members.html">Members</a>
+  <a href="savings.html">Savings</a>
+  <a href="loans.html">Loans</a>
+  <a href="reports.html">Reports</a>
+</nav>
 
 <div class="container">
   <h2>Dashboard Overview</h2>
-  <p style="margin-bottom:20px;color:#666">Welcome back! SACCO performance summary - Updated 29 Jul 2026</p>
-
-  <!-- 4 CARDS -->
+  
   <div class="cards">
-    <div class="card">
-      <h3>Total Members</h3>
-      <h2>1,254</h2>
-      <p>+48 this month ↑ 4.0%</p>
-    </div>
-    <div class="card">
-      <h3>Total Savings</h3>
-      <h2>UGX 142,500,000</h2>
-      <p>+UGX 12.4M ↑ 9.5%</p>
-    </div>
-    <div class="card">
-      <h3>Total Loans Out</h3>
-      <h2>UGX 98,750,000</h2>
-      <p>+UGX 7.2M ↑ 7.8%</p>
-    </div>
-    <div class="card">
-      <h3>Default Rate</h3>
-      <h2>3.2%</h2>
-      <p>-0.8% Improved</p>
-    </div>
+    <div class="card"><h3>Total Members</h3><h2>1,254</h2><p style="color:green">+48 this month</p></div>
+    <div class="card"><h3>Total Savings</h3><h2>UGX 142,500,000</h2><p style="color:green">+12.4M</p></div>
+    <div class="card"><h3>Loans Out</h3><h2>UGX 98,750,000</h2><p style="color:green">+7.2M</p></div>
+    <div class="card"><h3>Default Rate</h3><h2>3.2%</h2><p style="color:green">-0.8%</p></div>
   </div>
 
-  <!-- RECENT TRANSACTIONS -->
-  <div class="section">
-    <h2>Recent Transactions</h2>
-    <table>
-      <tr>
-        <th>Date</th><th>Member</th><th>Type</th><th>Amount</th><th>Status</th>
-      </tr>
-      <tr>
-        <td>29 Jul 2026</td><td>Margaret Kato</td><td>Savings Deposit</td><td>UGX 850,000</td>
-        <td><span class="status completed">Completed</span></td>
-      </tr>
-      <tr>
-        <td>28 Jul 2026</td><td>James Okello</td><td>Loan Disbursed</td><td>UGX 5,000,000</td>
-        <td><span class="status completed">Completed</span></td>
-      </tr>
-      <tr>
-        <td>28 Jul 2026</td><td>Aisha Nakato</td><td>Loan Repayment</td><td>UGX 410,000</td>
-        <td><span class="status completed">Completed</span></td>
-      </tr>
-      <tr>
-        <td>27 Jul 2026</td><td>Peter Musoke</td><td>Savings Deposit</td><td>UGX 500,000</td>
-        <td><span class="status pending">Pending</span></td>
-      </tr>
-    </table>
-  </div>
+  <h2 style="margin-top:30px">Quick Actions</h2>
+  <a href="savings.html" class="btn">+ New Deposit</a>
+  <a href="loans.html" class="btn">+ New Loan</a>
+  <a href="members.html" class="btn">+ New Member</a>
 
-  <!-- MEMBERS TABLE -->
-  <div class="section">
-    <h2>Top Members</h2>
-    <table>
-      <tr>
-        <th>Member ID</th><th>Name</th><th>Savings Balance</th><th>Active Loan</th>
-      </tr>
-      <tr>
-        <td>#00124</td><td>Margaret Kato</td><td>UGX 2,150,000</td><td>UGX 0</td>
-      </tr>
-      <tr>
-        <td>#00125</td><td>James Okello</td><td>UGX 1,800,000</td><td>UGX 5,000,000</td>
-      </tr>
-      <tr>
-        <td>#00126</td><td>Aisha Nakato</td><td>UGX 3,200,000</td><td>UGX 1,200,000</td>
-      </tr>
-    </table>
-  </div>
+  <h2 style="margin-top:30px">Recent Transactions</h2>
+  <table>
+    <tr><th>Date</th><th>Member</th><th>Type</th><th>Amount</th></tr>
+    <tr><td>29 Jul</td><td><a href="members.html">Margaret Kato</a></td><td>Deposit</td><td>UGX 850,000</td></tr>
+    <tr><td>28 Jul</td><td><a href="members.html">James Okello</a></td><td>Loan</td><td>UGX 5,000,000</td></tr>
+  </table>
 </div>
-
-<footer>
-  © 2026 Sanel Technologies Jinja SACCO • Licensed • +256 701 123 456 • support@saneljinja.ug
-</footer>
 
 </body>
 </html>
